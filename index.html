@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Javier System</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous">
+  </head>
+
+  <body>
+
+    <div class="container" style="margin-top: 30px;">
+      <div class="row">
+        <div class="col-md-6 offset-md-3">
+          <h2>
+            <center>An AI Powered University Adviser</center>
+          </h2>
+          <p class="error text-danger" style="margin-top: 20px;"></p>
+        </div>
+      </div>
+      <div class="row" style="margin-top: 30px;">
+        <div class="col-md-6 offset-md-3">
+          <div class="form-group">
+            <label for="">What is your name? </label>
+            <input type="text" id="name" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="">What is your age? </label>
+            <input type="number" id="age" class="form-control" min="1">
+          </div>
+          <div class="form-group">
+            <label for="option">
+              What was your department in secondary school?
+            </label>
+            <select class="form-control" id="option">
+              <option selected disabled>Select option</option>
+              <option value="business">Business</option>
+              <option value="science">Science</option>
+              <option value="arts">Arts</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="">What are you curious about?</label>
+            <input type="text" name="curious" id="curious" class="form-control">
+          </div>
+
+          <div class="form-group">
+            <label for="option">
+              What problems do you enjoy solving?
+            </label>
+            <select class="form-control" id="option">
+              <option selected disabled>Select option</option>
+              <option value="business_questions">Business related problems</option>
+              <option value="science_questions">Science related questions</option>
+              <option value="arts_questions">Arts related questions</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="option">
+              Do you like working with numbers?
+            </label>
+            <select class="form-control" id="option">
+              <option selected disabled>Select option</option>
+              <option value="yes_number">Yes</option>
+              <option value="no_number">No</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="option">
+              Do you like planning, organizing and creating structure?
+            </label>
+            <select class="form-control" id="option">
+              <option selected disabled>Select option</option>
+              <option value="yes_plan">Yes</option>
+              <option value="no_plan">No</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="option">
+              Do you enjoy building things and working with your hands?
+            </label>
+            <select class="form-control" id="option">
+              <option selected disabled>Select option</option>
+              <option value="yes_building">Yes</option>
+              <option value="no_building">No</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="option">
+              Do you enjoy reading?
+            </label>
+            <select class="form-control" id="option">
+              <option selected disabled>Select option</option>
+              <option value="yes_reading">Yes</option>
+              <option value="no_reading">No</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="option">
+              Are you passionate about information and communication?
+            </label>
+            <select class="form-control" id="option">
+              <option selected disabled>Select option</option>
+              <option value="yes_passionate">Yes</option>
+              <option value="no_passionate">No</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="option">
+              Have you graduated from high school?
+            </label>
+            <select class="form-control" id="option">
+              <option selected disabled>Select option</option>
+              <option value="yes">Yes</option>
+              <option value="no">No</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="">What was your grade out of a possible 4.0? </label>
+            <input type="number" id="grade" class="form-control" min="1">
+          </div>
+          <div class="form-group">
+            <label for="">How many years will you like to spend in school? </label>
+            <input type="number" id="years" class="form-control" min="1">
+          </div>
+          <div class="form-group">
+            <label for="budget">What is your budget per academic year?</label>
+            <input type="number" name="budget" id="budget" class="form-control" placeholder="Insert your budget here" min="1">
+          </div>
+          <button type="submit" id="predict" class="btn btn-primary">Submit</button>
+          <button type="reset" id="reset" class="btn btn-danger">Start Over</button>
+          <div style="margin-top: 50px;">
+            <h2 id="feedback" style="color: #d32f2f"></h2>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"></script>
+    <script src="base.js"></script>
+  </body>
+
+</html>

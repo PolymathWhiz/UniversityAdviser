@@ -29,7 +29,7 @@ $('#predict').click(function () {
 });
 
 
-function predict(problem, highschool, grade, yearleft) {
+function predict(problemSolving, highSchoolGraduation, grade, yearLeftInSchool) {
   if (problemSolving == problemArray[0]) {
     if (highSchoolGraduation == 'yes') {
       if (grade >= 50) {

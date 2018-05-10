@@ -16,7 +16,7 @@
       <div class="row">
         <div class="col-md-6 offset-md-3">
           <h2>
-            <center>An AI Powered University Adviser</center>
+            <center>An AI Powered University Major Adviser</center>
           </h2>
           <p class="error text-danger" style="margin-top: 20px;"></p>
         </div>
@@ -35,7 +35,7 @@
             <label for="option">
               What was your department in secondary school?
             </label>
-            <select class="form-control" id="option">
+            <select class="form-control" id="department">
               <option selected disabled>Select option</option>
               <option value="business">Business</option>
               <option value="science">Science</option>
@@ -52,7 +52,7 @@
             <label for="option">
               What problems do you enjoy solving?
             </label>
-            <select class="form-control" id="option">
+            <select class="form-control" id="optionProblem">
               <option selected disabled>Select option</option>
               <option value="business_questions">Business related problems</option>
               <option value="science_questions">Science related questions</option>
@@ -119,19 +119,30 @@
             <label for="option">
               Have you graduated from high school?
             </label>
-            <select class="form-control" id="option">
+            <select class="form-control" id="highSchoolGraduation">
               <option selected disabled>Select option</option>
               <option value="yes">Yes</option>
               <option value="no">No</option>
             </select>
           </div>
           <div class="form-group">
-            <label for="">What was your grade out of a possible 4.0? </label>
-            <input type="number" id="grade" class="form-control" min="1">
+            <label for="">What was your grade out of a possible 100? </label>
+            <input type="number" id="grade" class="form-control" min="0">
           </div>
           <div class="form-group">
-            <label for="">How many years will you like to spend in school? </label>
-            <input type="number" id="years" class="form-control" min="1">
+            <label for="">In how many years do you expect to graduate?</label>
+            <select class="form-control" id="yearSpend">
+              <option selected disabled>Select option</option>
+              <option value="1">One year</option>
+              <option value="2">Two years</option>
+              <option value="3">Three years</option>
+              <option value="4">Four years</option>
+              <option value="5">Five years</option>
+              <option value="6">Six years</option>
+              <option value="7">Seven years</option>
+              <option value="8">Eight years</option>
+
+            </select>
           </div>
           <div class="form-group">
             <label for="budget">What is your budget per academic year?</label>

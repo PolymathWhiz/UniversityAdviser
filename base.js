@@ -22,18 +22,22 @@ $('#predict').click(function () {
   grade = $('#grade').val();
   yearLeftInSchool = $('#yearSpend').val();
 
+  predict(problemSolving, highSchoolGraduation, grade, yearLeftInSchool);
+
+
+
 });
 
 
-function predict() {
+function predict(problem, highschool, grade, yearleft) {
   if (problemSolving == problemArray[0]) {
     if (highSchoolGraduation == 'yes') {
-      if (grade >= '50') {
-        if (yearLeftInSchool == '2') {
+      if (grade >= 50) {
+        if (yearLeftInSchool == 2) {
           feedback.html("" + majors[1]);
-        } else if (yearLeftInSchool == '3') {
+        } else if (yearLeftInSchool == 3) {
           feedback.html("" + majors[0]);
-        } else if (yearLeftInSchool == '4') {
+        } else if (yearLeftInSchool == 4) {
           feedback.html("" + majors[2]);
         } else {
           feedback.html("" + majors[3]);
@@ -47,12 +51,12 @@ function predict() {
 
   } else if (problemSolving == problemArray[1]) {
     if (highSchoolGraduation == 'yes') {
-      if (grade >= '50') {
-        if (yearLeftInSchool == '2') {
+      if (grade >= 50) {
+        if (yearLeftInSchool == 2) {
           feedback.html("" + majors[4]);
-        } else if (yearLeftInSchool == '3') {
+        } else if (yearLeftInSchool == 3) {
           feedback.html("" + majors[5]);
-        } else if (yearLeftInSchool == '4') {
+        } else if (yearLeftInSchool == 4) {
           feedback.html("" + majors[6]);
         } else {
           feedback.html("" + majors[7] + " or " + majors[8]);
@@ -66,13 +70,13 @@ function predict() {
 
   } else if (problemSolving == problemArray[2]) {
     if (highSchoolGraduation == 'yes') {
-      if (grade >= '50') {
+      if (grade >= 50) {
 
-        if (yearLeftInSchool == '2') {
+        if (yearLeftInSchool == 2) {
           feedback.html("" + majors[10]);
-        } else if (yearLeftInSchool == '3') {
+        } else if (yearLeftInSchool == 3) {
           feedback.html("" + majors[11]);
-        } else if (yearLeftInSchool == '4') {
+        } else if (yearLeftInSchool == 4) {
           feedback.html("" + majors[12]);
         } else {
           feedback.html("" + majors[11]);
@@ -83,5 +87,8 @@ function predict() {
       }
 
     } else {
+      feedback.html("You need to graduate from high school first before you can get access to any university...");
 
     }
+  }
+}
